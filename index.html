@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <!-- Form Section-->
+        <form id="weather-form">
+            <input type="text" id="location-input" placeholder="Enter city, country, or zip code...">
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <div class="unit-toggle">
+            <label for="temp-toggle">Temperature Unit:</label>
+            <div class="toggle-switch">
+                <input type="checkbox" id="temp-toggle">
+                <label for="temp-toggle">°F / °C</label>
+            </div>
+        </div>
+
+        <!--Progress Bar-->
+        <div id="loading" class="hidden">Loading weather data...</div>
+
+        <!--Main Content Container-->
+        <div id="weather-container" class="hidden"></div> 
+
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>

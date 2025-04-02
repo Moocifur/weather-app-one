@@ -1,0 +1,269 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* what is border box again? */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+#weather-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#location-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Loading indicator */
+#loading {
+    text-align: center;
+    margin: 20px 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* Error messsage */
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+    background-color: #fdf2f2;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+/* Weather display styling */
+#weather-container {
+    margin-top: 20px;
+}
+
+.current-weather {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.value {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* forecast styling */
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.forecast-day {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.forecast-temps {
+    margin: 10px 0;
+}
+
+.high {
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.low {
+    color: #3498db;
+}
+
+/* Background classes based on weather */
+.bg-clear-day {
+    background-color: #87CEEB; /* Sky blue */
+}
+
+.bg-clear-night {
+    background-color: #2c3e50; /* Dark blue */
+    color: white;
+}
+
+.bg-partly-cloudy-day {
+    background-color: #B0C4DE; /* Light steel blue */
+}
+
+.bg-partly-cloudy-night {
+    background-color: #34495e; /* Dark grayish blue */
+    color: white;
+}
+
+.bg-cloudy {
+    background-color: #D3D3D3; /* Light gray */
+}
+
+.bg-rain {
+    background-color: #87CEFA; /* Light sky blue */
+}
+
+.bg-snow {
+    background-color: #F0F8FF; /* Alice blue */
+}
+
+.bg-sleet {
+    background-color: #E0FFFF; /* Light cyan */
+}
+
+.bg-wind {
+    background-color: #F5F5F5; /* White smoke */
+}
+
+.bg-fog {
+    background-color: #DCDCDC; /* Gainsboro */
+}
+
+.bg-thunder, .bg-thunder-rain, .bg-thunder-showers-day, .bg-thunder-showers-night {
+    background-color: #778899; /* Light slate gray */
+    color: white;
+}
+
+/* Unit toggle styling */
+.unit-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    padding: 5px;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+}
+
+.toggle-switch input:checked + label {
+    background-color: #2196F3;
+    color: white;
+}
